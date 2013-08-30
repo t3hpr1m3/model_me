@@ -1,18 +1,22 @@
 require 'model_me/errors'
 
 module ModelMe
-  # = ModelMe
   #
   # ModelMe objects are based on ActiveModel (they include all of the
   # standard ActiveModel modules).  They also include a lot of syntatic sugar
   # to allow them to interoperate with ActiveRecord.
   #
-  # ModelMes are meant to be used in situations when the data they represent
-  # is not stored in a database, and might not even be OO in nature (ie. 
-  # procedural calls to a legacy system are required to access data and perform
-  # transactions).  Instead of data access being handled by ModelMe itself,
-  # it is delegated to one or more adapters defined by the user, registered
-  # with ModelMe.
+  # ModelMe objects are meant to be used in situations when the data they
+  # represent is not stored in a database, and might not even be OO in nature
+  # (ie. procedural calls to a legacy system are required to access data and
+  # perform transactions).  Instead of data access being handled by ModelMe
+  # itself, it is delegated to one or more adapters defined by the user,
+  # registered with ModelMe.
+  #
+  # == ActiveModel
+  #
+  # ModelMe models are fully ActiveModel compliant, meaning they can be used
+  # in standard Rails forms, just like ActiveRecord objects.
   #
   # == Definition
   #
@@ -44,7 +48,7 @@ module ModelMe
   #       end
   #     end
   #
-  # More about adapters and backing modules can be found in ModelMe::Adapters.
+  # More about adapters and backing modules can be found in {ModelMe::Adapters}.
   #
   # == Construction
   #
