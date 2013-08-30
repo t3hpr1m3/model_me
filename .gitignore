@@ -5,6 +5,7 @@
 .yardoc
 .rspec
 Gemfile.lock
+Guardfile
 InstalledFiles
 _yardoc
 coverage
