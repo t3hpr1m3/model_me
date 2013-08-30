@@ -1,5 +1,7 @@
 # ModelMe
 
+[![Build Status](https://secure.travis-ci.org/t3hpr1m3/model_me.png?branch=master)](http://travis-ci.org/t3hpr1m3/model_me)
+
 ModelMe connects your legacy datasource to your ruby application, allowing
 you to map legacy calls (TCP server, non-relational DB, etc) to Ruby models.
 
