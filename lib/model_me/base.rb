@@ -79,8 +79,10 @@ module ModelMe
     include AttributeMethods
     include Identity
     include Persistence
+    include Serialization
     include Validation
     include Adapters
+    include Reflection
     extend ActiveModel::Translation
     extend ActiveModel::Naming
 

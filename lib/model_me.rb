@@ -18,5 +18,7 @@ module ModelMe
   autoload :Logging
   autoload :Persistence
   autoload :Predicate
+  autoload :Reflection
+  autoload :Serialization
   autoload :Validation
 end
