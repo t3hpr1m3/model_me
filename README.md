@@ -2,8 +2,10 @@
 
 [![Build Status](https://secure.travis-ci.org/t3hpr1m3/model_me.png?branch=master)](http://travis-ci.org/t3hpr1m3/model_me)
 
-*Legacy Data...Moderized.*
+*Legacy Data...Modernized.*
 ---
+
+This is still a work in progress, but progress is good.
 
 **ModelMe** attempts to fill the gap between the awesomeness of modern web
 applications, and the grunge of dealing with legacy data sources.
@@ -23,13 +25,16 @@ Rails developer.
 
 ## Why ModelMe?
 
-ActiveRecord is an excellent piece of software.  AREL, the relation library
-that backs it, is even better.  The only problem is that they both assume that
-your data store is SQL based (which is normally a fair assumption).  AREL
-provides some facilities to allow you to deal with non-SQL data stores,
-but they are definitely not pretty.  What I really needed was all the power
-that ActiveModel now offers, with the ability to read/write data from an
-arbitrary data source.
+An exhaustive explanation of why ModelMe came to exist can be found in
+[this](http://blog.codingprime.com/2013/08/31/modelmewhy) blog post.  In a
+nutshell:
+
+ 1.  I needed to use both local SQL data and a legacy data store in the same application, and
+ 1.  ActiveRecord was a requirement for the SQL, which meant using something
+     like [DataMapper](http://datamapper.org) would have meant a lot of
+     thinking during development (is this an AR or DM model?).
+
+For these reasons, **ModelMe** came to be.
 
 ## Installation
 
@@ -43,7 +48,7 @@ And then execute:
 
 ## Usage
 
-Creating *ModelMe* classes is almost identical to using
+Creating **ModelMe** classes is almost identical to using
 [ActiveRecord](https://github.com/rails/activerecord).  The only noticable
 difference is the need to explicitly define the attribute of your model,
 instead of them being inferred from the data source.
@@ -72,7 +77,7 @@ We'll get into the nuts and bolts of how this persistence works later.
 
 ### ActiveModel Features
 
-Because ModelMe includes all the goodies provided by ActiveModel, you
+Because **ModelMe** includes all the goodies provided by ActiveModel, you
 automatically have access to Validations, Callbacks, Dirty state, Observers,
 etc.  For examples of their usage, the following links should be helpful:  
 [Active Model](http://railscasts.com/episodes/219-active-model)  
@@ -81,7 +86,7 @@ etc.  For examples of their usage, the following links should be helpful:
 
 ### Associations
 
-ModelMe supports associations as well (although currently limited to has_one,
+**ModelMe** supports associations as well (although currently limited to has_one,
 has_many, and belongs_to).  The syntax for both creating and using these is
 identical to ActiveRecord.
 
@@ -94,15 +99,7 @@ end
 These associations can be to other ModelMe models, or ActiveRecord models (yes,
 you can have associations from ActiveRecord to ModelMe me as well.  Shazam!).
 
-Tight integration exists between ModelMe and ActiveRecord, allowing for
-2-way associations that are handled transparently.
-
-Unlike ActiveRecord, model attributes are defined manually by the user.  Data
-access is handled by custom adapters, written by the user, which specify how to
-interact with your datasource.  Each ModelMe class will have a model module
-that shadows it, specifying how to perform the 4 CRUD actions.
-
-TODO: Write usage instructions here.
+TODO: Finish this shizzle.
 
 ## Contributing
 
