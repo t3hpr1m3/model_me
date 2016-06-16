@@ -26,7 +26,7 @@ Rails developer.
 ## Why ModelMe?
 
 An exhaustive explanation of why ModelMe came to exist can be found in
-[this](http://blog.codingprime.com/2013/08/31/modelmewhy) blog post.  In a
+[this](http://codingprime.com/blog/2013/08/modelmewhy/) blog post.  In a
 nutshell:
 
  1.  I needed to use both local SQL data and a legacy data store in the same application, and
